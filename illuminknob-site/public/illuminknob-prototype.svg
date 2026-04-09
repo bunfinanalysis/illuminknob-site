@@ -1,0 +1,115 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wall" x1="84" y1="80" x2="690" y2="1124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F8FA"/>
+      <stop offset="0.44" stop-color="#EEF0F4"/>
+      <stop offset="1" stop-color="#E6E8EE"/>
+    </linearGradient>
+    <linearGradient id="plate" x1="395" y1="315" x2="646" y2="651" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCFDFF"/>
+      <stop offset="0.18" stop-color="#D5D9E0"/>
+      <stop offset="0.38" stop-color="#9AA1AB"/>
+      <stop offset="0.63" stop-color="#E7EAEE"/>
+      <stop offset="0.84" stop-color="#7D848E"/>
+      <stop offset="1" stop-color="#BDC3CB"/>
+    </linearGradient>
+    <radialGradient id="plateCenter" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(514 471) rotate(91.4688) scale(189.243)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.94"/>
+      <stop offset="0.52" stop-color="#DBDFE5" stop-opacity="0.66"/>
+      <stop offset="1" stop-color="#767D87" stop-opacity="0.16"/>
+    </radialGradient>
+    <radialGradient id="knob" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(270 351) rotate(48.7156) scale(338.179)">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.28" stop-color="#DCE1E8"/>
+      <stop offset="0.6" stop-color="#868F9C"/>
+      <stop offset="1" stop-color="#BDC4CD"/>
+    </radialGradient>
+    <radialGradient id="knobCenter" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(332 437) rotate(43.912) scale(202.51)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="0.35" stop-color="#F4F7FB" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#6B7583" stop-opacity="0.08"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 477) rotate(90) scale(140)">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.36" stop-color="#EAF6FF" stop-opacity="0.98"/>
+      <stop offset="0.72" stop-color="#BDE3FF" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#7BCBFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="innerPlate" x1="420" y1="378" x2="602" y2="564" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9FAFC"/>
+      <stop offset="0.3" stop-color="#B4BBC4"/>
+      <stop offset="0.58" stop-color="#EFF2F6"/>
+      <stop offset="1" stop-color="#9099A6"/>
+    </linearGradient>
+    <linearGradient id="core" x1="469" y1="415" x2="553" y2="526" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8B69B"/>
+      <stop offset="0.46" stop-color="#7A5136"/>
+      <stop offset="1" stop-color="#CDB39F"/>
+    </linearGradient>
+    <filter id="shadow" x="255" y="279" width="458" height="548" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="30" dy="46"/>
+      <feGaussianBlur stdDeviation="28"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.194 0 0 0 0 0.215 0 0 0 0 0.263 0 0 0 0.26 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <filter id="plateShadow" x="320" y="270" width="420" height="424" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_1_1"/>
+    </filter>
+    <filter id="glowBlur" x="315" y="278" width="397" height="397" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="18" result="effect1_foregroundBlur_1_1"/>
+    </filter>
+  </defs>
+  <rect width="800" height="1200" fill="url(#wall)"/>
+  <g opacity="0.1">
+    <path d="M22 52H778" stroke="#D5D9E0"/>
+    <path d="M22 118H778" stroke="#DCE0E7"/>
+    <path d="M22 184H778" stroke="#D5D9E0"/>
+    <path d="M22 250H778" stroke="#DCE0E7"/>
+    <path d="M22 316H778" stroke="#D5D9E0"/>
+    <path d="M22 382H778" stroke="#DCE0E7"/>
+    <path d="M22 448H778" stroke="#D5D9E0"/>
+    <path d="M22 514H778" stroke="#DCE0E7"/>
+    <path d="M22 580H778" stroke="#D5D9E0"/>
+    <path d="M22 646H778" stroke="#DCE0E7"/>
+    <path d="M22 712H778" stroke="#D5D9E0"/>
+    <path d="M22 778H778" stroke="#DCE0E7"/>
+    <path d="M22 844H778" stroke="#D5D9E0"/>
+    <path d="M22 910H778" stroke="#DCE0E7"/>
+    <path d="M22 976H778" stroke="#D5D9E0"/>
+    <path d="M22 1042H778" stroke="#DCE0E7"/>
+    <path d="M22 1108H778" stroke="#D5D9E0"/>
+  </g>
+  <g filter="url(#shadow)">
+    <ellipse cx="559" cy="776" rx="132" ry="122" fill="#3A4048" fill-opacity="0.28"/>
+    <g filter="url(#plateShadow)">
+      <circle cx="512" cy="472" r="160" fill="url(#plate)"/>
+      <circle cx="512" cy="472" r="160" fill="url(#plateCenter)"/>
+      <circle cx="512" cy="472" r="137" stroke="#AAB1BA" stroke-width="4" stroke-opacity="0.52"/>
+    </g>
+    <g filter="url(#glowBlur)">
+      <circle cx="510" cy="476" r="110" fill="url(#glow)"/>
+    </g>
+    <circle cx="510" cy="476" r="101" stroke="#EAF7FF" stroke-width="34" stroke-opacity="0.88"/>
+    <circle cx="510" cy="476" r="106" stroke="#89D5FF" stroke-width="12" stroke-opacity="0.48"/>
+    <circle cx="510" cy="476" r="74" fill="url(#innerPlate)"/>
+    <circle cx="510" cy="476" r="42" fill="url(#core)"/>
+    <circle cx="510" cy="476" r="22" fill="#1C1514"/>
+    <path d="M510 452C518.837 452 526 459.163 526 468V480C526 488.837 518.837 496 510 496C501.163 496 494 488.837 494 480V468C494 459.163 501.163 452 510 452ZM510 458C504.477 458 500 462.477 500 468V480C500 485.523 504.477 490 510 490C515.523 490 520 485.523 520 480V468C520 462.477 515.523 458 510 458Z" fill="#0F0A09"/>
+    <path d="M510 492C516.075 492 521 496.925 521 503V514H499V503C499 496.925 503.925 492 510 492Z" fill="#0F0A09"/>
+    <circle cx="324" cy="476" r="150" fill="url(#knob)"/>
+    <circle cx="324" cy="476" r="150" fill="url(#knobCenter)"/>
+    <circle cx="324" cy="476" r="142" stroke="#C9D1DA" stroke-width="3" stroke-opacity="0.42"/>
+    <path d="M184 475.5C184 398.472 246.472 336 323.5 336V336C400.528 336 463 398.472 463 475.5V475.5C463 552.528 400.528 615 323.5 615V615C246.472 615 184 552.528 184 475.5V475.5Z" fill="url(#knobCenter)" fill-opacity="0.54"/>
+    <ellipse cx="290" cy="426" rx="82" ry="45" transform="rotate(-27 290 426)" fill="white" fill-opacity="0.56"/>
+    <ellipse cx="306" cy="444" rx="102" ry="57" transform="rotate(-27 306 444)" fill="white" fill-opacity="0.18"/>
+    <path d="M324 344C338.578 390.742 346 434.994 346 476.756C346 518.517 338.578 562.769 324 609.512C309.422 562.769 302 518.517 302 476.756C302 434.994 309.422 390.742 324 344Z" fill="#778290" fill-opacity="0.42"/>
+  </g>
+</svg>
+

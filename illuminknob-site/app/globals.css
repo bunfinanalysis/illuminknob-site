@@ -1,0 +1,312 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07111e;
+  --background-soft: #0d1828;
+  --foreground: #f8fbff;
+  --muted: #9eb0c9;
+  --line: rgba(226, 232, 240, 0.12);
+  --card: rgba(11, 20, 35, 0.72);
+  --card-strong: rgba(16, 28, 47, 0.88);
+  --accent-warm: #f3c35c;
+  --accent-warm-strong: #ffe29b;
+  --accent-cool: #67d6ff;
+  --success: #34d399;
+  --danger: #fda4af;
+  --radius: 1.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  height: 100%;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(103, 214, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 85% 14%, rgba(243, 195, 92, 0.14), transparent 18%),
+    linear-gradient(180deg, #050c16 0%, #07111e 35%, #091522 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: rgba(243, 195, 92, 0.35);
+  color: #081019;
+}
+
+a,
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+summary {
+  cursor: pointer;
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-20 sm:py-24;
+  }
+
+  .surface-panel {
+    @apply rounded-[2rem] border border-white/10 bg-white/5 shadow-[0_24px_90px_rgba(0,0,0,0.28)] backdrop-blur-sm;
+  }
+
+  .section-kicker {
+    @apply inline-flex items-center rounded-full border border-white/10 bg-white/6 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-slate-100;
+  }
+
+  .input-shell {
+    @apply mt-2 w-full rounded-2xl border border-white/12 bg-slate-950/70 px-4 py-3.5 text-base text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/65 focus:ring-4 focus:ring-cyan-300/20;
+  }
+
+  .textarea-shell {
+    @apply mt-2 min-h-[11rem] w-full resize-y rounded-2xl border border-white/12 bg-slate-950/70 px-4 py-3.5 text-base text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/65 focus:ring-4 focus:ring-cyan-300/20;
+  }
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.door-visual {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(circle at 18% 18%, rgba(103, 214, 255, 0.2), transparent 26%),
+    linear-gradient(160deg, rgba(6, 12, 22, 0.92), rgba(13, 23, 39, 0.92));
+  box-shadow: 0 26px 90px rgba(0, 0, 0, 0.32);
+}
+
+.door-visual__noise {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.02), transparent 25%),
+    linear-gradient(300deg, rgba(255, 255, 255, 0.015), transparent 28%);
+}
+
+.door-visual__door {
+  position: absolute;
+  inset: 10%;
+  border-radius: 1.75rem;
+  background:
+    linear-gradient(135deg, rgba(29, 43, 64, 0.96), rgba(11, 19, 32, 0.98)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset -36px 0 44px rgba(0, 0, 0, 0.36);
+}
+
+.door-visual__shadow {
+  position: absolute;
+  inset: auto 22% 18% 18%;
+  height: 30%;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.44), transparent 72%);
+  filter: blur(16px);
+}
+
+.door-visual__halo {
+  position: absolute;
+  left: 59%;
+  top: 51%;
+  width: 15rem;
+  height: 15rem;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 227, 154, 0.48) 0%,
+    rgba(255, 203, 97, 0.3) 22%,
+    rgba(103, 214, 255, 0.14) 38%,
+    transparent 72%
+  );
+  filter: blur(12px);
+  animation: pulse-glow 5.2s ease-in-out infinite;
+}
+
+.door-visual__plate {
+  position: absolute;
+  left: 59%;
+  top: 51%;
+  width: 8.25rem;
+  height: 8.25rem;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.04)),
+    linear-gradient(145deg, #b9c2d1 0%, #7d8798 34%, #4c5768 100%);
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.door-visual__rim {
+  position: absolute;
+  inset: 0.75rem;
+  border-radius: inherit;
+  border: 0.55rem solid rgba(255, 221, 141, 0.78);
+  box-shadow:
+    0 0 0 0.16rem rgba(255, 242, 197, 0.18),
+    0 0 32px rgba(255, 205, 94, 0.34);
+}
+
+.door-visual__knob {
+  position: absolute;
+  left: 59%;
+  top: 51%;
+  width: 5.8rem;
+  height: 5.8rem;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at 32% 28%,
+    #ffffff 0%,
+    #d9e0ea 24%,
+    #9ba8bb 58%,
+    #606d83 100%
+  );
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.34),
+    inset 0 2px 4px rgba(255, 255, 255, 0.72),
+    inset -10px -16px 20px rgba(57, 69, 91, 0.28);
+}
+
+.door-visual__core {
+  position: absolute;
+  inset: 1.05rem;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 35% 30%,
+    rgba(255, 255, 255, 0.96),
+    rgba(193, 204, 219, 0.68) 48%,
+    rgba(99, 112, 136, 0.5) 100%
+  );
+}
+
+.door-visual__reflection {
+  position: absolute;
+  left: 54.5%;
+  top: 39%;
+  width: 6rem;
+  height: 2rem;
+  transform: rotate(-28deg);
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.72), transparent 72%);
+  opacity: 0.58;
+  filter: blur(7px);
+}
+
+.door-visual__base-glow {
+  position: absolute;
+  left: 59%;
+  top: 63%;
+  width: 14rem;
+  height: 5rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 203, 97, 0.38), transparent 70%);
+  filter: blur(18px);
+}
+
+.door-visual__callout {
+  position: absolute;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(4, 10, 18, 0.82);
+  padding: 0.65rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #eef4ff;
+  backdrop-filter: blur(12px);
+}
+
+.door-visual__callout--top {
+  right: 1.25rem;
+  top: 1.5rem;
+}
+
+.door-visual__callout--left {
+  left: 1.5rem;
+  top: 44%;
+}
+
+.door-visual__callout--bottom {
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+@media (max-width: 640px) {
+  .door-visual__door {
+    inset: 8%;
+  }
+
+  .door-visual__plate {
+    width: 7.1rem;
+    height: 7.1rem;
+    left: 57%;
+  }
+
+  .door-visual__knob {
+    width: 5rem;
+    height: 5rem;
+    left: 57%;
+  }
+
+  .door-visual__halo {
+    width: 12.5rem;
+    height: 12.5rem;
+    left: 57%;
+  }
+
+  .door-visual__base-glow {
+    left: 57%;
+  }
+}

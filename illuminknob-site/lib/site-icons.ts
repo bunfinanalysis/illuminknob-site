@@ -1,0 +1,48 @@
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  Building2,
+  ChevronDown,
+  DoorOpen,
+  Eye,
+  Hand,
+  HeartHandshake,
+  Home,
+  Hotel,
+  Lightbulb,
+  Mail,
+  MapPin,
+  MessageSquareText,
+  MoonStar,
+  Phone,
+  ShieldCheck,
+  Sparkles,
+  Users,
+  Wrench,
+} from "lucide-react";
+
+export const siteIcons = {
+  arrowRight: ArrowRight,
+  briefcase: BriefcaseBusiness,
+  building: Building2,
+  chevronDown: ChevronDown,
+  door: DoorOpen,
+  eye: Eye,
+  hand: Hand,
+  heart: HeartHandshake,
+  home: Home,
+  hotel: Hotel,
+  lightbulb: Lightbulb,
+  mail: Mail,
+  mapPin: MapPin,
+  message: MessageSquareText,
+  moon: MoonStar,
+  phone: Phone,
+  shield: ShieldCheck,
+  sparkles: Sparkles,
+  users: Users,
+  wrench: Wrench,
+};
+
+export type SiteIconKey = keyof typeof siteIcons;
+

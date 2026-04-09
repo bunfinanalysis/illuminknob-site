@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://illuminknob.example/sitemap.xml
