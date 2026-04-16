@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { BrandLogo } from "@/components/site/brand-logo";
-import { primaryNavItems, siteConfig } from "@/lib/site-content";
+import { primaryNavItems, siteConfig, teamLinkedInLinks } from "@/lib/site-content";
 
 export function SiteFooter() {
   return (
@@ -13,8 +13,8 @@ export function SiteFooter() {
             <p className="mt-4 text-sm text-slate-400">{siteConfig.shortDescription}</p>
             <p className="mt-5 text-sm leading-7 text-slate-400">
               Built to communicate Illuminknob’s mission with clear, accessibility-minded
-              messaging. Contact details and some product preview details remain clearly
-              marked placeholders until launch.
+              messaging. Some product preview details remain clearly marked placeholders
+              until launch.
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export function SiteFooter() {
 
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-200">
-              Placeholder Contact
+              Contact
             </h2>
             <ul className="mt-4 space-y-3 text-sm text-slate-300">
               <li>
@@ -46,23 +46,64 @@ export function SiteFooter() {
                   {siteConfig.supportEmail}
                 </a>
               </li>
-              <li>
-                <a href={`mailto:${siteConfig.partnerEmail}`} className="hover:text-white">
-                  {siteConfig.partnerEmail}
-                </a>
-              </li>
-              <li>
-                <a href="tel:+15550102486" className="hover:text-white">
-                  {siteConfig.phone}
-                </a>
-              </li>
-              <li>{siteConfig.address}</li>
+              {siteConfig.partnerEmail && siteConfig.partnerEmail !== siteConfig.supportEmail ? (
+                <li>
+                  <a href={`mailto:${siteConfig.partnerEmail}`} className="hover:text-white">
+                    {siteConfig.partnerEmail}
+                  </a>
+                </li>
+              ) : null}
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/8 pt-6 text-sm text-slate-500">
-          <p>© 2026 Illuminknob. Demo site with placeholder launch details.</p>
+        <section
+          aria-labelledby="footer-team-linkedin"
+          className="mt-10 rounded-[28px] border border-white/8 bg-white/[0.03] p-6 sm:p-8"
+        >
+          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-200">
+                Team Contact
+              </p>
+              <h2
+                id="footer-team-linkedin"
+                className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl"
+              >
+                Connect with the Illuminknob team on LinkedIn
+              </h2>
+              <p className="mt-4 max-w-xl text-base leading-7 text-slate-300">
+                Reach out directly for founder introductions, partnership conversations, and
+                product-related networking.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-3">
+              {teamLinkedInLinks.map((member) => (
+                <a
+                  key={member.name}
+                  href={member.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-2xl border border-white/10 bg-[rgba(12,20,34,0.9)] px-5 py-5 text-base font-medium text-slate-100 transition hover:border-amber-300/30 hover:text-white"
+                  aria-label={`${member.name} LinkedIn profile`}
+                >
+                  <span className="block text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+                    LinkedIn
+                  </span>
+                  <span className="mt-3 block text-lg font-semibold tracking-tight text-white">
+                    {member.name}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="mt-10 border-t border-white/8 pt-6">
+          <p className="text-sm text-slate-500">
+            © 2026 Illuminknob. Demo site with placeholder launch details.
+          </p>
         </div>
       </div>
     </footer>

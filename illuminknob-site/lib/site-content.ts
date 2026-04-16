@@ -9,10 +9,8 @@ export const siteConfig = {
     "Illuminknob is a doorknob concept with illumination around the base and rim, created to improve low-light visibility in homes, guest rooms, apartments, and accessibility-minded spaces.",
   missionStatement:
     "Illuminknob exists to make low-light navigation feel simpler, more comfortable, and more intuitive through practical hardware design.",
-  supportEmail: "hello@illuminknob.example",
-  partnerEmail: "partners@illuminknob.example",
-  phone: "(555) 010-2486",
-  address: "Placeholder mailing address, City, ST 00000",
+  supportEmail: "illuminknob@gmail.com",
+  partnerEmail: "illuminknob@gmail.com",
 };
 
 export const primaryNavItems = [
@@ -22,6 +20,21 @@ export const primaryNavItems = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
+
+export const teamLinkedInLinks = [
+  {
+    name: "Dominic Saffioti",
+    href: "https://www.linkedin.com/in/dominic-saffioti-277a452b2/",
+  },
+  {
+    name: "Joseph Ingegneri",
+    href: "https://www.linkedin.com/in/joseph-ingegneri/",
+  },
+  {
+    name: "Kyle Harvin",
+    href: "https://www.linkedin.com/in/kyle-i-harvin-5a93b2360/",
+  },
+] as const;
 
 export const problemPoints: Array<{
   title: string;
@@ -249,4 +262,3 @@ export const contactReasons: Array<{
     icon: "heart",
   },
 ];
-

@@ -19,8 +19,6 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const Mail = siteIcons.mail;
-  const Phone = siteIcons.phone;
-  const MapPin = siteIcons.mapPin;
 
   return (
     <>
@@ -32,11 +30,10 @@ export default function ContactPage() {
           <div className="space-y-5">
             <div>
               <p className="text-sm uppercase tracking-[0.24em] text-slate-400">
-                Placeholder contact details
+                Contact details
               </p>
               <p className="mt-3 text-base leading-7 text-slate-300">
-                These demo launch details are included so the site feels complete while still
-                clearly signaling where production contact information should be updated.
+                Reach out by email below for product questions, partnerships, and accessibility-related inquiries.
               </p>
             </div>
             <div className="space-y-3 text-sm text-slate-200">
@@ -47,17 +44,6 @@ export default function ContactPage() {
                 <Mail className="h-4 w-4 text-cyan-100" />
                 {siteConfig.supportEmail}
               </a>
-              <a
-                href="tel:+15550102486"
-                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/6 px-4 py-3 hover:bg-white/10"
-              >
-                <Phone className="h-4 w-4 text-cyan-100" />
-                {siteConfig.phone}
-              </a>
-              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/6 px-4 py-3 text-slate-200">
-                <MapPin className="h-4 w-4 text-cyan-100" />
-                {siteConfig.address}
-              </div>
             </div>
           </div>
         }
@@ -105,4 +91,3 @@ export default function ContactPage() {
     </>
   );
 }
-
