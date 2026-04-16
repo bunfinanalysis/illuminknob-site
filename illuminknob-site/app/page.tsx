@@ -8,7 +8,6 @@ import {
   brandPrinciples,
   faqs,
   problemPoints,
-  productPreviewBullets,
   siteConfig,
   solutionSteps,
   useCases,
@@ -205,53 +204,6 @@ export default function HomePage() {
                 </article>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space">
-        <div className="container-shell">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="surface-panel p-6 sm:p-8">
-              <span className="section-kicker">Product preview</span>
-              <h2 className="mt-6 text-3xl font-semibold text-white">Concept overview</h2>
-              <p className="mt-4 text-base leading-7 text-slate-300">
-                A visual preview of how Illuminknob could be presented before final engineering,
-                manufacturing, and certification details are available.
-              </p>
-              <div className="mt-8">
-                <PrototypeShowcase compact />
-              </div>
-            </div>
-
-            <div className="surface-panel p-6 sm:p-8">
-              <span className="section-kicker">Placeholder / demo copy</span>
-              <h3 className="mt-6 text-3xl font-semibold text-white">
-                Spec-style content for early conversations
-              </h3>
-              <p className="mt-4 text-base leading-7 text-slate-300">
-                The items below are intentionally framed as concept placeholders. They describe
-                direction and intent rather than final technical performance claims.
-              </p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {productPreviewBullets.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-[1.5rem] border border-white/10 bg-slate-950/50 p-5"
-                  >
-                    <p className="text-sm uppercase tracking-[0.22em] text-slate-400">
-                      Preview item
-                    </p>
-                    <p className="mt-3 text-lg font-semibold text-white">{item}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 rounded-[1.5rem] border border-cyan-300/16 bg-cyan-300/8 p-5 text-sm leading-7 text-cyan-50/90">
-                No exact power, material, installation, brightness, durability, or compliance
-                specs are claimed here. Replace this section with finalized product details when
-                they exist.
-              </div>
-            </div>
           </div>
         </div>
       </section>

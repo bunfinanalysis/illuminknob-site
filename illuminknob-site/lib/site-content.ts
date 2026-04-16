@@ -164,13 +164,6 @@ export const useCases: Array<{
   },
 ];
 
-export const productPreviewBullets = [
-  "Low-light visibility enhancement",
-  "Minimalist knob design",
-  "Easy integration concept",
-  "Residential and hospitality-friendly styling",
-];
-
 export const brandPrinciples: Array<{
   title: string;
   description: string;
@@ -205,7 +198,7 @@ export const faqs = [
   {
     question: "Is the product available now?",
     answer:
-      "This website presents launch-ready marketing copy and a product concept preview. Availability, final product timing, and commercial details can be shared through the waitlist or contact form as development progresses.",
+      "Illuminknob is currently in development and is not yet publicly available. We are gathering interest, feedback, and strategic partnerships as we move toward prototype testing and future launch updates.",
   },
   {
     question: "Are the technical specifications final?",
