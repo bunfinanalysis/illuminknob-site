@@ -131,7 +131,7 @@ export default function AboutPage() {
             <div className="max-w-3xl">
               <span className="section-kicker">Next step</span>
               <h2 className="mt-6 text-3xl font-semibold text-white">
-                Follow the product story or start a partnership conversation.
+                Follow the product story or join the early access list for updates.
               </h2>
               <p className="mt-4 text-base leading-7 text-slate-300">
                 Use the waitlist for updates or contact the team for distribution,

@@ -102,7 +102,7 @@ export function SiteFooter() {
 
         <div className="mt-10 border-t border-white/8 pt-6">
           <p className="text-sm text-slate-500">
-            © 2026 Illuminknob. Demo site with placeholder launch details.
+            © 2026 Illuminknob.
           </p>
         </div>
       </div>

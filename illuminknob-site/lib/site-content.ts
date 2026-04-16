@@ -4,6 +4,8 @@ export const siteConfig = {
   name: "Illuminknob",
   waitlistUrl:
     "https://docs.google.com/forms/d/e/1FAIpQLSeNNJqI6UXUfJU_4qUftacGQY5gYudjhgtV37H_UTsEEDuAYg/viewform?usp=publish-editor",
+  partnershipFormUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSen9865skRPEm9P-MB-J0D6K8rmgl4zLT1xazc6fXlE9FGKXg/viewform?usp=publish-editor",
   shortDescription:
     "A modern illuminated doorknob concept designed to make doors easier to locate in low-light environments.",
   heroHeadline: "A clearer way to find the door at night.",
@@ -218,7 +220,7 @@ export const faqs = [
   {
     question: "Can distributors or accessibility partners get involved?",
     answer:
-      "Yes. The contact page includes a dedicated form and placeholder outreach channels for partnerships, distribution conversations, and accessibility-related inquiries.",
+      "Yes. The contact page directs interested partners to a dedicated inquiry form and direct email contact for distribution, hospitality, and accessibility-related conversations.",
   },
 ];
 
@@ -249,18 +251,18 @@ export const contactReasons: Array<{
   icon: SiteIconKey;
 }> = [
   {
-    title: "Waitlist and product interest",
-    description: "Ask for launch updates, early product information, or general availability details.",
+    title: "Hospitality and guest spaces",
+    description: "Use the form if you are evaluating Illuminknob for guest rooms, hallways, or broader hospitality rollout conversations.",
     icon: "message",
   },
   {
     title: "Distribution and partnerships",
-    description: "Reach out about reseller conversations, hospitality rollout interest, or pilot programs.",
+    description: "Start reseller, builder, pilot program, or channel partnership discussions through the dedicated inquiry form.",
     icon: "briefcase",
   },
   {
     title: "Accessibility-related inquiries",
-    description: "Start a conversation about usability, visibility, and accessibility-minded product positioning.",
+    description: "Share interest in usability, visibility, and accessibility-minded placement for residential or commercial environments.",
     icon: "heart",
   },
 ];
