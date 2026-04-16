@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 import { BrandLogo } from "@/components/site/brand-logo";
 import { ButtonLink } from "@/components/site/button-link";
-import { primaryNavItems } from "@/lib/site-content";
+import { primaryNavItems, siteConfig } from "@/lib/site-content";
 import { cx } from "@/lib/utils";
 
 export function SiteHeader() {
@@ -60,7 +60,7 @@ export function SiteHeader() {
           </div>
 
           <div className="hidden md:block">
-            <ButtonLink href="/#waitlist">Join the Waitlist</ButtonLink>
+            <ButtonLink href={siteConfig.waitlistUrl}>Join the Waitlist</ButtonLink>
           </div>
 
           <button
@@ -90,7 +90,7 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
-              <ButtonLink href="/#waitlist" className="mt-3 justify-center">
+              <ButtonLink href={siteConfig.waitlistUrl} className="mt-3 justify-center">
                 Join the Waitlist
               </ButtonLink>
             </div>

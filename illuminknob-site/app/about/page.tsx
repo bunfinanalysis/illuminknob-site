@@ -139,7 +139,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <ButtonLink href="/#waitlist">Join the Waitlist</ButtonLink>
+              <ButtonLink href={siteConfig.waitlistUrl}>Join the Waitlist</ButtonLink>
               <ButtonLink href="/contact" variant="secondary">
                 Contact Us
               </ButtonLink>
@@ -150,4 +150,3 @@ export default function AboutPage() {
     </>
   );
 }
-

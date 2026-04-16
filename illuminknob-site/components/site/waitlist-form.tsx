@@ -1,9 +1,5 @@
-"use client";
-
-import { useState } from "react";
-
-import { buttonVariants } from "@/lib/utils";
-import { validateWaitlistEmail } from "@/lib/validation";
+import { ButtonLink } from "@/components/site/button-link";
+import { siteConfig } from "@/lib/site-content";
 
 type WaitlistFormProps = {
   id?: string;
@@ -14,30 +10,8 @@ type WaitlistFormProps = {
 export function WaitlistForm({
   id = "waitlist",
   title = "Join the waitlist",
-  description = "Get product updates, launch timing, and early information as Illuminknob progresses.",
+  description = "Use the official Illuminknob waitlist form to request product updates, launch timing, and early information.",
 }: WaitlistFormProps) {
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
-  const [status, setStatus] = useState("");
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    const nextError = validateWaitlistEmail(email);
-
-    if (nextError) {
-      setError(nextError);
-      setStatus("");
-      return;
-    }
-
-    setError("");
-    setStatus(
-      "Thanks for your interest. This demo validates on the front end only, so connect a mailing list or CRM before launch.",
-    );
-    setEmail("");
-  }
-
   return (
     <div id={id} className="surface-panel p-6 sm:p-7">
       <div className="max-w-xl">
@@ -45,51 +19,19 @@ export function WaitlistForm({
         <p className="mt-3 text-base leading-7 text-slate-300">{description}</p>
       </div>
 
-      <form className="mt-6 space-y-4" noValidate onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor={`${id}-email`} className="text-sm font-medium text-slate-100">
-            Email address
-          </label>
-          <input
-            id={`${id}-email`}
-            name="email"
-            type="email"
-            autoComplete="email"
-            placeholder="you@example.com"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            aria-invalid={Boolean(error)}
-            aria-describedby={`${id}-note ${error ? `${id}-error` : `${id}-status`}`}
-            className="input-shell"
-          />
-          {error ? (
-            <p id={`${id}-error`} className="mt-2 text-sm text-rose-300">
-              {error}
-            </p>
-          ) : null}
-        </div>
+      <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-slate-950/50 p-5">
+        <p className="text-sm uppercase tracking-[0.22em] text-slate-400">Waitlist form</p>
+        <p className="mt-3 text-sm leading-6 text-slate-300">
+          Clicking below opens the live Google Form where visitors can submit their waitlist information directly.
+        </p>
+      </div>
 
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <button type="submit" className={buttonVariants("primary")}>
-            Join the Waitlist
-          </button>
-          <p id={`${id}-note`} className="text-sm leading-6 text-slate-400">
-            Demo form UI with front-end validation. Submission handling can be connected later.
-          </p>
-        </div>
-
-        <div aria-live="polite">
-          {status ? (
-            <p
-              id={`${id}-status`}
-              className="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-100"
-            >
-              {status}
-            </p>
-          ) : null}
-        </div>
-      </form>
+      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <ButtonLink href={siteConfig.waitlistUrl}>Join the Waitlist</ButtonLink>
+        <p className="text-sm leading-6 text-slate-400">
+          The waitlist now routes straight to the hosted signup form.
+        </p>
+      </div>
     </div>
   );
 }
-

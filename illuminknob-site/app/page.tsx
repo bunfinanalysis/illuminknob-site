@@ -38,7 +38,7 @@ export default function HomePage() {
                 {siteConfig.heroDescription}
               </p>
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <ButtonLink href="/#waitlist">
+                <ButtonLink href={siteConfig.waitlistUrl}>
                   Join the Waitlist
                   <ArrowRight className="h-4 w-4" />
                 </ButtonLink>

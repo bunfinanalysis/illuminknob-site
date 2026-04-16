@@ -2,6 +2,8 @@ import type { SiteIconKey } from "@/lib/site-icons";
 
 export const siteConfig = {
   name: "Illuminknob",
+  waitlistUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSeNNJqI6UXUfJU_4qUftacGQY5gYudjhgtV37H_UTsEEDuAYg/viewform?usp=publish-editor",
   shortDescription:
     "A modern illuminated doorknob concept designed to make doors easier to locate in low-light environments.",
   heroHeadline: "A clearer way to find the door at night.",
